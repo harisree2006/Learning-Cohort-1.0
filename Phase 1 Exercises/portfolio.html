@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Harisree — Portfolio</title>
+
+
+
+<style>
+
+body{
+
+ font-family: Arial, Helvetica, sans-serif;
+
+ margin:0; padding:0;
+
+ background:#f7f7f9;
+
+ color:#222;
+
+ line-height:1.5;
+
+}
+
+
+
+/* header / nav */
+
+.headerWrap {
+
+ background:#111; color:#fff;
+
+ padding:12px 18px;
+
+ box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+
+}
+
+.navRow { 
+
+ max-width:1100px; margin:auto;
+
+ display:flex; justify-content:space-between; align-items:center;
+
+}
+
+.brandName { font-size:1.25rem; margin:0; }
+
+.menuList { list-style:none; display:flex; gap:14px; margin:0; padding:0; }
+
+.menuList a { color:#fff; text-decoration:none; padding:6px 8px; border-radius:6px; }
+
+.menuList a:hover { background:#ffb74d; color:#111; }
+
+
+
+.hero {
+
+ max-width:900px; margin:26px auto; padding:34px 20px;
+
+ background: linear-gradient(180deg,#fffefe, #fff7e6);
+
+ border-radius:10px;
+
+ box-shadow: 0 6px 20px rgba(40,40,70,0.03);
+
+}
+
+.hero h1 { margin:0 0 10px 0; font-size:1.8rem; }
+
+.hero p { margin:0; color:#333; }
+
+
+
+
+
+.sectionBox {
+
+ max-width:900px; margin:18px auto; padding:20px; 
+
+ background:#ffffff; border-radius:8px;
+
+ box-shadow: 0 4px 12px rgba(20,20,40,0.02);
+
+}
+
+
+
+.sectionBox h2{ margin-top:0; font-size:1.2rem; }
+
+.sectionBox p{ color:#444; }
+
+
+
+.myProjects { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:12px; }
+
+.projectCard { padding:12px; border:1px solid #eee; border-radius:8px; background:#fff; }
+
+.projectCard h3 { margin:0 0 6px 0; font-size:1rem; }
+
+
+
+.contactInfo a { color:#1565c0; text-decoration:none; }
+
+.contactInfo a:hover { text-decoration:underline; }
+
+
+
+.siteFooter {
+
+ margin-top:22px; background:#111; color:#fff; padding:12px 0; text-align:center;
+
+ font-size:0.95rem;
+
+}
+
+
+
+@media (max-width:700px){
+
+ .navRow { flex-direction:column; gap:10px; align-items:flex-start; padding:6px 18px; }
+
+ .menuList { flex-wrap:wrap; }
+
+ .hero { margin:16px 12px; padding:20px; }
+
+ .sectionBox { margin:12px; padding:14px; }
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+ <!-- simple nav — casual comment: this is my small header -->
+
+ <header class="headerWrap">
+
+  <div class="navRow">
+
+   <h1 class="brandName">💻 Harisree S</h1>
+
+   <nav>
+
+    <ul class="menuList">
+
+     <li><a href="#home">Home</a></li>
+
+     <li><a href="#about">About</a></li>
+
+     <li><a href="#projects">Projects</a></li>
+
+     <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+   </nav>
+
+  </div>
+
+ </header>
+
+
+
+ <!-- home / hero -->
+
+ <main>
+
+  <section id="home" class="hero" aria-label="home">
+
+   <h1>Welcome — Hi, I'm Harisree 🚀</h1>
+
+   <p>I'm a BTech student. I build small web projects, practise algorithms, and sometimes write notes for KTU exams. </p>
+
+  </section>
+
+
+
+  <!-- about -->
+
+  <section id="about" class="sectionBox" aria-label="about">
+
+   <h2>About Me</h2>
+
+   <p>Quick lines: I like HTML, Java, Python, and C. I enjoy making UI that looks clean and is easy to use.
+
+     I'm not a fan of the code, so expect some late-night commits ;)
+
+</p>
+
+  </section>
+
+
+
+  <!-- projects -->
+
+  <section id="projects" class="sectionBox" aria-label="projects">
+
+   <h2>Projects</h2>
+
+
+
+   <div class="myProjects">
+
+    <div class="projectCard">
+
+     <h3>Personal Portfolio</h3>
+
+     <p>Static site is simple, responsive, and easy to edit.</p>
+
+    </div>
+
+
+
+    <div class="projectCard">
+
+     <h3>Calculator (Java)</h3>
+
+     <p>OOP basics: functions for add, sub, multiply, divide, console and GUI versions.</p>
+
+    </div>
+
+
+
+    <div class="projectCard">
+
+     <h3>Study Notes</h3>
+
+     <p>Short, exam-ready notes for quick revision. LaTeX + markdown.</p>
+
+    </div>
+
+   </div>
+
+  </section>
+
+
+
+  <!-- contact -->
+
+  <section id="contact" class="sectionBox" aria-label="contact">
+
+   <h2>Contact</h2>
+
+   <p class="contactInfo">Email: <a href="mailto:harisree@example.com">harisree@example.com</a></p>
+
+   <p class="contactInfo">GitHub: <a href="https://github.com/harisree" target="_blank" rel="noopener">github.com/harisree</a></p>
+
+  </section>
+
+ </main>
+
+
+
+ <!-- footer — made it friendly -->
+
+ <footer class="siteFooter">
+
+  <p>© 2025 Harisree — Crafted with ♥, a little patience</p>
+
+ </footer>
+
+
+
+</body>
+
+</html>
