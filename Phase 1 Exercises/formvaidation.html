@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Semantic Form with CSS Validation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+   body{
+background-color:white;
+color:black;
+front-family:Arial, sans-serif;
+text-align: center
+}
+h1,h2{
+fornt-weight: bold
+}
+input[type="text"],input[type="email"],
+   
+  </style>
+</head>
+<body>
+<main>
+  <h1>Quick Signup</h1>
+ 
+  <form action="#" method="post" novalidate>
+    <!-- Personal info -->
+    <fieldset>
+      <legend>Personal details</legend>
+
+      <div class="row">
+        <div class="field">
+          <label for="first">First name <span class="req">*<br></span></label>
+          <input id="first" name="first" type="text" placeholder="e.g., Harisree" required minlength="2" /><br>
+          <div class="hint">Use at least 2 letters.</div>          <div class="error">Please enter your first name (min 2 letters).</div><br>
+        </div>
+
+        <div class="field">
+          <label for="last">Last name <span class="req">*<br></span></label>
+          <input id="last" name="last" type="text" placeholder="e.g., S." required minlength="1" /><br>
+          <div class="error">Last name can’t be empty.</div>
+        </div>
+      </div>
+
+      <div class="field"><br>
+        <label for="email">Email <span class="req">*<br></span></label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        <div class="error">Enter a valid email like you@example.com.</div>
+      </div><br>
+
+      <div class="field">
+        <label for="phone">Phone (10 digits)</label>
+        <input id="phone" name="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}"
+               placeholder="9876543210" />
+        <div class="hint">Numbers only, no spaces/dashes.</div>
+        <div class="error">Phone must be exactly 10 digits.</div>
+      </div>
+    </fieldset>
+
+    <!-- Account -->
+    <fieldset>
+      <legend>Account</legend>
+
+      <div class="field">
+        <label for="password">Password <span class="req">*<br></span></label>
+        <input id="password" name="password" type="password"
+               placeholder="••••••••"
+               required minlength="8"
+               pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}" />
+        <div class="hint">Min 8 chars, include letters & a number.</div>
+        <div class="error">Password needs 8+ chars with letters & a number.</div>
+      </div>
+
+      <div class="field">
+        <label for="role">Role <span class="req">*<br></span></label>
+        <select id="role" name="role" required>
+          <option value="" selected disabled>— choose one —</option>
+          <option>Student</option>
+          <option>Professional</option>
+          <option>Other</option>
+        </select>
+        <div class="error">Please select your role.</div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Extras</legend>
+      <div class="field">
+        <label for="bio">Short bio</label><br>
+        <textarea id="bio" name="bio" rows="3" placeholder="Tell us a little about you…"></textarea>
+      </div>
+    </fieldset>
+
+    <div class="actions">
+      <button type="reset" class="ghost">Clear</button>
+      <button type="submit" class="primary">Create account</button>
+    </div>
+  </form>
+
+ </main>
+</body>
+</html>
