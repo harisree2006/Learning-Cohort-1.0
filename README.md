@@ -10,3 +10,5 @@ Learning Cohort 1.0, containing code exercises, projects files and learning mate
 . grade calculator.java
 
 . portfolio.html
+
+. responsivenavigationbar.htm
